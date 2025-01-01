@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color1: #192e4b;
+    --color2: #912F56;
+    --color3: #446d9a;
+    --color4: #f1faee;
+    --color5: #259f93;
+}
+
+body {
+    background-color: var(--color4);
+    user-select: none;
+    font-family: 'Arial Narrow Bold', sans-serif;
+}
+
+nav div.navbar {
+    z-index: 2;
+    position: fixed;
+    margin: 0;
+    padding:1vh 0;
+    width: 100%;
+    height: min(8vh, 8vw);
+    overflow: hidden;
+    background-color: var(--color1);
+    font-size: max(20px, 3vh);
+    text-align: center;
+
+    a.nav-item:not(#logo) {
+        text-decoration: none;
+        color: var(--color4);
+        text-align: center;
+        margin-right: max(2vh, 2vw);
+        list-style-type: none;
+        float: right;
+        padding: 1vh 2vh;
+        outline: none;
+    }
+
+    .active-nav-link {
+        border-bottom: 3px solid var(--color3);
+    }
+}
+
+nav div.navbar a#nav-search {
+    cursor: pointer;
+    width: 5%;
+}
+
+nav div.navbar a#btn-login {
+    background-color: var(--color5);
+    border: 3px solid #16665e;
+    border-radius: 10%;
+}
+
+nav div.navbar a.nav-item:not(#logo, #btn-login):hover,
+a.nav-item:not(#logo, #btn-login):focus {
+    text-shadow: 1px 1px 4px #4e75ac;
+}
+
+nav div.navbar a#btn-login:hover {
+    text-shadow: 2px 2px 4px #114e48;
+}
+
+nav div.navbar a#logo {
+    left: 0;
+    top: 1;
+    position: fixed;
+    text-decoration: none;
+    padding: 0;
+    aspect-ratio: 3/2;
+}
+
+/* hidden search input field*/
+#navbar .search-item {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    opacity: 0.95;
+    display: block;
+    float: right;
+    width: 70%;
+    padding: min(1vh, 1vw);
+    border-bottom-left-radius: min(2vh, 1vw);
+    background-color: var(--color5);
+    transition: all 500ms;
+
+    .search-query {
+        margin-left: 15%;
+        text-align: center;
+        width: 60%;
+        padding: 1vh;
+        font-size: max(18px, 2.5vh);
+        background-color: var(--color4);
+        outline: none;
+        border: none;
+        border-radius: max(2vh, 1vw);
+    }
+
+    .go-search {
+        background-color: var(--color4);
+        padding: 1vh 3vh;
+        font-size: max(18px, 2.5vh);
+        outline: none;
+        border: none;
+        border-radius: max(2vh, 1vw);
+    }
+}
+/*end hidden part*/
+
+section.intro{
+    margin-top: 6%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    padding: 1%;
+    background-color: #000;
+    opacity: 0.95;
+    color: var(--color4);
+}
+section.intro div.intro-element{
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+section.intro div.intro-text{
+    padding: 5% 0;
+}
+section.intro div.intro-element p.description{
+    font-size: max(3vw, 3vh);
+
+    big{
+        font-weight: bold;
+        font-size: max(4vw, 4vh);
+        animation:turnON 10s linear infinite alternate;
+    }
+}
+section.intro div.intro-img img{
+    width: 100%;
+    height: 80vh;
+}
+svg #light, #bright{
+    animation:turnON 15s linear infinite alternate;
+}
+@keyframes turnON{
+    0%{fill: #E5AF57;opacity: 1;text-shadow: 0 0 1vh #f6b54e;}
+    10%{opacity: 0.6;text-shadow: 0 0 1vh #ed845a;}
+    20%{opacity:0.8;text-shadow: 0 0 1vh #f6b54e;}
+    30%{opacity: 1;text-shadow: 0 0 1vh #fbaf36;}
+    50%{fill: none;opacity: 0;}
+    52%{fill: #E5AF57;text-shadow: 0 0 1vh #e27e37;}
+    54%{fill: none;opacity: 0;}
+    57%{fill: #E5AF57;text-shadow: 0 0 1vh #f6b54e;}
+    70%{opacity: 0.8;text-shadow: 0 0 1vh #ed845a;}
+    80%{opacity: 1;text-shadow: 0 0 1vh #fca343;}
+    100%{opacity: 1;fill: #E5AF57;}
+}
+
+section.demo-steps{
+    width: 100%;
+    padding: 0.5%;
+    font-size: max(20px, 3vh);
+
+    fieldset{
+        border: 0.3vh solid #014942;
+        border-radius: 5px;
+        border-top-left-radius: 5vh;
+
+        legend{
+            text-align: center;
+            font-size: max(22px, 4vh);
+        }
+    }
+}
+section.demo-steps div.steps-container{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+section.demo-steps div.steps-container div.step{
+    width: 25%;
+    margin: 4% 0 2% 0;
+    padding: 1%;
+    text-align: center;
+
+    img{
+        width: 70%;
+        padding: 10%;
+        height: min(30vw, 30vh);
+        border-radius: 5%;
+        box-shadow: 0 0 min(1vh, 1vw) #192e4b;
+        transition: 150ms all;
+    }
+    img:hover, img:focus{
+        box-shadow: 0 0 max(1.5vh, 1.5vw) var(--color5);
+    }
+    .step-text{
+        padding: 5% 2% 0 2%;
+        color: #014942;
+    }
+}
+
+section.category{
+    .category-wrap{
+        padding: 1%;
+        box-shadow: 0 0 min(1.2vh, 1vw);
+
+        p.title{
+            line-height: 15vh;
+            font-size: max(25px, 4vh);
+            text-align: center;
+        }
+    }
+}
+section.category .container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3%;
+    padding: 1% 1%;
+}
+section.category .container div.element{
+    margin: 2%;
+    width: 25%;
+    text-align: center;
+    border-radius: 5%;
+    box-shadow: 0 0 min(1.5vh, 2vw) #262626;
+    transition: 150ms all;
+}
+section.category .container div.element:hover{
+    background-color: #edeff2;
+    box-shadow: 0 0 max(1.5vh, 1.5vw) #262626;
+}
+section.category .container div.element{
+    p.cate-img{
+    padding: 5%;
+    }
+
+    p.fig-capt{
+        margin: auto;
+        width: 80%;
+        padding: 5% 0;
+        font-size: max(25px, 3vh);
+        border-top: 1px solid var(--color5);
+        color: #021734;
+    }
+}
