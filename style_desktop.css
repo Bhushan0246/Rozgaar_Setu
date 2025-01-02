@@ -22,7 +22,7 @@ nav div.navbar {
     z-index: 2;
     position: fixed;
     margin: 0;
-    padding:1vh 0;
+    padding: 1vh 0;
     width: 100%;
     height: min(8vh, 8vw);
     overflow: hidden;
@@ -111,9 +111,10 @@ nav div.navbar a#logo {
         border-radius: max(2vh, 1vw);
     }
 }
+
 /*end hidden part*/
 
-section.intro{
+section.intro {
     margin-top: 6%;
     width: 100%;
     display: flex;
@@ -125,74 +126,64 @@ section.intro{
     opacity: 0.95;
     color: var(--color4);
 }
-section.intro div.intro-element{
+
+section.intro div.intro-element {
     justify-content: center;
     width: 50%;
     height: 100%;
 }
-section.intro div.intro-text{
+
+section.intro div.intro-text {
     padding: 5% 0;
 }
-section.intro div.intro-element p.description{
+
+section.intro div.intro-element p.description {
     font-size: max(3vw, 3vh);
 
-    big{
+    big {
         font-weight: bold;
         font-size: max(4vw, 4vh);
-        animation:turnON 10s linear infinite alternate;
+        animation: turnON 10s linear infinite alternate;
     }
 }
-section.intro div.intro-img img{
+
+section.intro div.intro-img img {
     width: 100%;
     height: 80vh;
 }
-svg #light, #bright{
-    animation:turnON 15s linear infinite alternate;
-}
-@keyframes turnON{
-    0%{fill: #E5AF57;opacity: 1;text-shadow: 0 0 1vh #f6b54e;}
-    10%{opacity: 0.6;text-shadow: 0 0 1vh #ed845a;}
-    20%{opacity:0.8;text-shadow: 0 0 1vh #f6b54e;}
-    30%{opacity: 1;text-shadow: 0 0 1vh #fbaf36;}
-    50%{fill: none;opacity: 0;}
-    52%{fill: #E5AF57;text-shadow: 0 0 1vh #e27e37;}
-    54%{fill: none;opacity: 0;}
-    57%{fill: #E5AF57;text-shadow: 0 0 1vh #f6b54e;}
-    70%{opacity: 0.8;text-shadow: 0 0 1vh #ed845a;}
-    80%{opacity: 1;text-shadow: 0 0 1vh #fca343;}
-    100%{opacity: 1;fill: #E5AF57;}
-}
 
-section.demo-steps{
+section.demo-steps {
     width: 100%;
     padding: 0.5%;
     font-size: max(20px, 3vh);
 
-    fieldset{
+    fieldset {
         border: 0.3vh solid #014942;
         border-radius: 5px;
         border-top-left-radius: 5vh;
 
-        legend{
+        legend {
             text-align: center;
             font-size: max(22px, 4vh);
         }
     }
 }
-section.demo-steps div.steps-container{
+
+section.demo-steps div.steps-container {
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10%;
 }
-section.demo-steps div.steps-container div.step{
+
+section.demo-steps div.steps-container div.step {
     width: 25%;
     margin: 4% 0 2% 0;
     padding: 1%;
     text-align: center;
 
-    img{
+    img {
         width: 70%;
         padding: 10%;
         height: min(30vw, 30vh);
@@ -200,28 +191,32 @@ section.demo-steps div.steps-container div.step{
         box-shadow: 0 0 min(1vh, 1vw) #192e4b;
         transition: 150ms all;
     }
-    img:hover, img:focus{
+
+    img:hover,
+    img:focus {
         box-shadow: 0 0 max(1.5vh, 1.5vw) var(--color5);
     }
-    .step-text{
+
+    .step-text {
         padding: 5% 2% 0 2%;
         color: #014942;
     }
 }
 
-section.category{
-    .category-wrap{
+section.category {
+    .category-wrap {
         padding: 1%;
         box-shadow: 0 0 min(1.2vh, 1vw);
 
-        p.title{
+        p.title {
             line-height: 15vh;
             font-size: max(25px, 4vh);
             text-align: center;
         }
     }
 }
-section.category .container{
+
+section.category .container {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -230,7 +225,8 @@ section.category .container{
     gap: 3%;
     padding: 1% 1%;
 }
-section.category .container div.element{
+
+section.category .container div.element {
     margin: 2%;
     width: 25%;
     text-align: center;
@@ -238,16 +234,18 @@ section.category .container div.element{
     box-shadow: 0 0 min(1.5vh, 2vw) #262626;
     transition: 150ms all;
 }
-section.category .container div.element:hover{
+
+section.category .container div.element:hover {
     background-color: #edeff2;
     box-shadow: 0 0 max(1.5vh, 1.5vw) #262626;
 }
-section.category .container div.element{
-    p.cate-img{
-    padding: 5%;
+
+section.category .container div.element {
+    p.cate-img {
+        padding: 5%;
     }
 
-    p.fig-capt{
+    p.fig-capt {
         margin: auto;
         width: 80%;
         padding: 5% 0;
@@ -255,4 +253,100 @@ section.category .container div.element{
         border-top: 1px solid var(--color5);
         color: #021734;
     }
+}
+
+section.labour-cards-container p.title {
+    line-height: 15vh;
+    font-size: max(25px, 4vh);
+    text-align: center;
+}
+section.labour-cards-container div.labour-cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    padding: 1% 5%;
+}
+
+section.labour-cards-container div.labour-cards .labour {
+    margin: auto;
+    width: 40%;
+    padding: min(1vh, 2vw);
+    font-size: larger;
+    color: #0b0b0b;
+    display: flex;
+    align-items: center;
+    border: 3px solid var(--color2);
+    border-top-left-radius: min(3vh, 3vw);
+    border-bottom-right-radius: min(3vh, 3vw);
+}
+section.labour-cards-container div.labour-cards .labour .details-contain {
+    
+    .gender-age {
+        display: flex;
+        align-items: center;
+        gap: 5%;
+
+        .gender-age-element{
+            width: 50%;
+            margin: auto;
+        }
+    }
+    .locality{
+        width: 100%;
+        margin: auto;
+        align-items: center;
+    }
+}
+
+footer{
+    margin: 0;
+    padding: 2%;
+    width: 100%;
+    background: linear-gradient(80deg, rgba(25,46,75,1) 35%, rgba(0,212,255,0.95) 37%);
+}
+footer .footer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+}
+footer .footer-container .element{
+    text-align: center;
+    align-items: center;
+    width: 30vw;
+}
+footer .footer-container .quick-link{
+    align-items: center;
+
+    .sub-title{
+        width: 15vw;
+        font-size: max(4.3vh, 2.3vw);
+        color: var(--color1);
+        line-height: min(15vh, 12vw);
+        translate: 4vh 0;
+    }
+    .link-container a{
+        width: 15vw;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        padding: 10% 20% 5% 20%;
+        font-size: larger;
+        color: var(--color1);
+        border-bottom: 2px dotted var(--color5);
+    }
+    .link-container a:hover{
+        text-shadow: 1px 1px 0.1vh var(--color1);
+        border-bottom: 2px dotted var(--color1);
+    }
+}
+footer .footer-container .contact-foot{
+    font-size: large;
+    text-align: left;
+    .fa{
+        padding: 2% 0;
+        font-size: max(25px,5vh);
+    }
+
 }
